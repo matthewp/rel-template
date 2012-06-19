@@ -16,7 +16,7 @@
       req = new XMLHttpRequest();
 
     req.open('GET', this.link.href, true);
-    req.setRequestHeader('Accept', this.link.type);
+    req.setRequestHeader('Accept', this.link.type || "*/*");
     req.onreadystatechange = function() {
       if(req.readyState !== 4) {
         return;

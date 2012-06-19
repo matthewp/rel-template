@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test 2</title>
+    <link rel="template" type="text/mustache" href="test.mustache" />
+    <script src="rel-template2.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script defer>
+      var link = document.getElementsByTagName('link')[0];
+      var tmpl = link.template;
+      document.getElementById('content').textContent = tmpl;
+    </script>
+  </body>
+</html>
