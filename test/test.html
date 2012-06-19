@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Testing</title>
+		<link href="test.mustache" rel="template" type="text/mustache" onload="loaded(arguments[0]);" />
+    <script src="../rel-template.js"></script>
+	</head>
+	<body>
+		<div id="content"></div>
+		<script>
+    function loaded(tmpl) {
+      var div = document.createElement('div');
+      div.textContent = tmpl;
+      document.getElementById('content').appendChild(div);
+    }
+		</script>
+    <script defer>
+      var link = document.createElement('link');
+      link.rel = 'template';
+      link.type = 'text/mustache';
+      link.href = 'test.mustache';
+      link.onload = loaded;
+      link.load();
+    </script>
+	</body>
+</html>
